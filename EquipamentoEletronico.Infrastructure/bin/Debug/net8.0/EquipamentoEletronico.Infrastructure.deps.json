@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EquipamentoEletronico.Infrastructure/1.0.0": {
+        "dependencies": {
+          "EquipamentoEletronico.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EquipamentoEletronico.Infrastructure.dll": {}
+        }
+      },
+      "EquipamentoEletronico.Domain/1.0.0": {
+        "runtime": {
+          "EquipamentoEletronico.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EquipamentoEletronico.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EquipamentoEletronico.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

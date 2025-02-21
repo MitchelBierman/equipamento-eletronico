@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1984B4EE-FC82-4819-A70A-915C522E57B7}|..\\EquipamentoEletronico.Domain\\EquipamentoEletronico.Domain.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.domain\\entities\\equipamentoeletronico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B848C47-28B3-4CA3-A2B6-6FC463637DCE}|..\\EquipamentoEletronico.Tests\\EquipamentoEletronico.Tests.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C90020B-B9F9-42AF-8E9D-865EFCFE1E0E}|..\\EquipamentoEletronico.Infrastructure\\EquipamentoEletronico.Infrastructure.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C90020B-B9F9-42AF-8E9D-865EFCFE1E0E}|..\\EquipamentoEletronico.Infrastructure\\EquipamentoEletronico.Infrastructure.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.infrastructure\\repositories\\equipamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACBD0F8F-8CDA-48E8-825A-0BC97267CAD9}|EquipamentoEletronicoAPI.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACBD0F8F-8CDA-48E8-825A-0BC97267CAD9}|EquipamentoEletronicoAPI.csproj|solutionrelative:controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1984B4EE-FC82-4819-A70A-915C522E57B7}|..\\EquipamentoEletronico.Domain\\EquipamentoEletronico.Domain.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.domain\\validators\\equipamentovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1984B4EE-FC82-4819-A70A-915C522E57B7}|..\\EquipamentoEletronico.Domain\\EquipamentoEletronico.Domain.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.domain\\interfaces\\iequipamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5017B1CC-98D5-4A9D-8DE3-55EAF2A9D72C}|..\\EquipamentoEletronico.Application\\EquipamentoEletronico.Application.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.application\\dtos\\equipamentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5017B1CC-98D5-4A9D-8DE3-55EAF2A9D72C}|..\\EquipamentoEletronico.Application\\EquipamentoEletronico.Application.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.application\\services\\equipamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5017B1CC-98D5-4A9D-8DE3-55EAF2A9D72C}|..\\EquipamentoEletronico.Application\\EquipamentoEletronico.Application.csproj|d:\\dev\\equipamento-eletronico\\equipamentoeletronico.application\\services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Tests\\UnitTest1.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:39:39.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:38:32.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EquipamentoRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Infrastructure\\Repositories\\EquipamentoRepository.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Infrastructure\\Repositories\\EquipamentoRepository.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Infrastructure\\Repositories\\EquipamentoRepository.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Infrastructure\\Repositories\\EquipamentoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:37:14.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EquipamentoController.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico\\Controllers\\EquipamentoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EquipamentoController.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico\\Controllers\\EquipamentoController.cs",
+              "RelativeToolTip": "Controllers\\EquipamentoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:35:49.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EquipamentoValidator.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\Validators\\EquipamentoValidator.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Domain\\Validators\\EquipamentoValidator.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\Validators\\EquipamentoValidator.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Domain\\Validators\\EquipamentoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:33:23.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEquipamentoRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\Interfaces\\IEquipamentoRepository.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Domain\\Interfaces\\IEquipamentoRepository.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\Interfaces\\IEquipamentoRepository.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Domain\\Interfaces\\IEquipamentoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:33:00.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EquipamentoEletronico.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\Entities\\EquipamentoEletronico.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Domain\\Entities\\EquipamentoEletronico.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\Entities\\EquipamentoEletronico.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Domain\\Entities\\EquipamentoEletronico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:32:38.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EquipamentoDTO.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Application\\DTOs\\EquipamentoDTO.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Application\\DTOs\\EquipamentoDTO.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Application\\DTOs\\EquipamentoDTO.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Application\\DTOs\\EquipamentoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:31:40.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EquipamentoService.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Application\\Services\\EquipamentoService.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Application\\Services\\EquipamentoService.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Application\\Services\\EquipamentoService.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Application\\Services\\EquipamentoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:31:05.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Application\\Services\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\EquipamentoEletronico.Application\\Services\\Class1.cs",
+              "ToolTip": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Application\\Services\\Class1.cs",
+              "RelativeToolTip": "..\\EquipamentoEletronico.Application\\Services\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:30:41.68Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
