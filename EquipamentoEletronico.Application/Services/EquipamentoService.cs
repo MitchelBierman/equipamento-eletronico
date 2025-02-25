@@ -40,20 +40,38 @@ namespace EquipamentoEletronico.Application.Services
             return _contexto.Equipamentos.FirstOrDefault(e => e.Id == id);
         }
 
-        public void AdicionarEquipamento(Equipamento equipamento)
+        public string AdicionarEquipamento(Equipamento equipamento)
         {
-            _contexto.Equipamentos.Add(equipamento);
-            _contexto.SaveChanges();
+            var nomeUnico = _contexto.Equipamentos.Where(x => x.Nome == equipamento.Nome && x.Id != equipamento.Id).ToList().Count == 0;
+
+            if (!nomeUnico)
+            {
+                return "Já existe um equipamento com este nome.";
+            }
+            else
+            {
+                _contexto.Equipamentos.Add(equipamento);
+                _contexto.SaveChanges();
+                return string.Empty;
+            }
         }
 
-        public void EditarEquipamento(Equipamento equipamento)
+        public string EditarEquipamento(Equipamento equipamento)
         {
             var equipamentoExistente = _contexto.Equipamentos.Find(equipamento.Id);
+            var nomeUnico = _contexto.Equipamentos.Where(x => x.Nome == equipamento.Nome && x.Id != equipamento.Id).ToList().Count == 0;
+
+            if (!nomeUnico)
+                return "Já existe um equipamento com este nome.";
+
             if (equipamentoExistente != null)
             {
                 _contexto.Entry(equipamentoExistente).CurrentValues.SetValues(equipamento);
                 _contexto.SaveChanges();
+                return string.Empty;
             }
+
+            return "Equipamento não encontrado.";
         }
 
         public void ExcluirEquipamento(int id)

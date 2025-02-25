@@ -14,7 +14,6 @@ public class EquipamentoEletronicoValidator : AbstractValidator<Equipamento>
             .NotEmpty().WithMessage("O Nome é obrigatório.")
             .MaximumLength(100).WithMessage("O Nome não pode ter mais de 100 caracteres.")
             .MinimumLength(3).WithMessage("O Nome deve ter pelo menos 3 caracteres.")
-            .Must(NomeUnico).WithMessage("Já existe um equipamento com este nome.")
             .Must(ContemNaoNumerico).WithMessage("O Nome não pode conter apenas números.");
 
         RuleFor(e => e.Tipo)
@@ -29,11 +28,6 @@ public class EquipamentoEletronicoValidator : AbstractValidator<Equipamento>
 
         RuleFor(e => e.DataInclusao)
             .LessThanOrEqualTo(DateTime.Now).WithMessage("A Data de Inclusão não pode ser no futuro.");
-    }
-
-    private bool NomeUnico(string nome)
-    {
-        return !_equipamentoRepository.NomeJaExiste(nome);
     }
 
     private bool ContemNaoNumerico(string value)

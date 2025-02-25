@@ -18,7 +18,6 @@ namespace EquipamentoEletronico.Controllers
             _equipamentoValidator = equipamentoValidator;
         }
 
-        // GET: /Equipamento
         public IActionResult Index()
         {
             try
@@ -41,7 +40,6 @@ namespace EquipamentoEletronico.Controllers
             }
         }
 
-        // GET: /Equipamento/Detalhes/{id}
         public IActionResult Detalhes(int id)
         {
             var equipamento = _equipamentoService.GetById(id);
@@ -61,7 +59,6 @@ namespace EquipamentoEletronico.Controllers
             return View(viewModel);
         }
 
-        // GET: /Equipamento/Criar (renders form)
         public IActionResult Criar()
         {
             return View(new EquipamentoModel
@@ -71,7 +68,6 @@ namespace EquipamentoEletronico.Controllers
             });
         }
 
-        // POST: /Equipamento/Criar (handles form submission)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Criar(EquipamentoModel viewModel)
@@ -94,16 +90,22 @@ namespace EquipamentoEletronico.Controllers
             {
                 foreach (var error in validationResult.Errors)
                 {
-                    ModelState.AddModelError("", error.ErrorMessage);
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
                 return View(viewModel);
             }
 
-            _equipamentoService.AdicionarEquipamento(equipamento);
+            var resultado = _equipamentoService.AdicionarEquipamento(equipamento);
+
+            if (!string.IsNullOrEmpty(resultado))
+            {
+                ModelState.AddModelError(nameof(viewModel.Nome), resultado);
+                return View(viewModel);
+            }
+
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: /Equipamento/Editar/{id}
         public IActionResult Editar(int id)
         {
             var equipamento = _equipamentoService.GetById(id);
@@ -123,7 +125,6 @@ namespace EquipamentoEletronico.Controllers
             return View(viewModel);
         }
 
-        // POST: /Equipamento/Editar
         [HttpPost]
         public IActionResult Editar(EquipamentoModel viewModel)
         {
@@ -132,15 +133,26 @@ namespace EquipamentoEletronico.Controllers
                 return View(viewModel);
             }
 
-            var equipamento = new Equipamento
-            {
-                Id = viewModel.Id,
-                Nome = viewModel.Nome,
-                Tipo = viewModel.Tipo,
-                QtdEmEstoque = viewModel.QtdEmEstoque
-            };
+            var equipamento = viewModel.ToEntity();
 
-            _equipamentoService.EditarEquipamento(equipamento);
+            var validationResult = _equipamentoValidator.Validate(equipamento);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+                return View(viewModel);
+            }
+
+            var resultado = _equipamentoService.EditarEquipamento(equipamento);
+
+            if (!string.IsNullOrEmpty(resultado))
+            {
+                ModelState.AddModelError(nameof(viewModel.Nome), resultado);
+                return View(viewModel);
+            }
 
             return RedirectToAction(nameof(Index));
         }

@@ -5,7 +5,6 @@ namespace EquipamentoEletronico.Infrastructure
 {
     public class EquipamentoEletronicoDbContext : DbContext
     {
-
         public EquipamentoEletronicoDbContext(DbContextOptions<EquipamentoEletronicoDbContext> options)
             : base(options) { }
 
@@ -15,5 +14,4 @@ namespace EquipamentoEletronico.Infrastructure
             base.OnModelCreating(modelBuilder);
         }
     }
-
 }

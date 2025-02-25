@@ -10,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddValidatorsFromAssembly(typeof(EquipamentoEletronicoValidator).Assembly);
+builder.Services.AddFluentValidationClientsideAdapters();
+
+builder.Services.AddValidatorsFromAssemblyContaining<EquipamentoEletronicoValidator>();
 
 builder.Services.AddDbContext<EquipamentoEletronicoDbContext>(options =>
     options.UseInMemoryDatabase("EquipamentosDB"));
