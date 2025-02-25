@@ -64,7 +64,11 @@ namespace EquipamentoEletronico.Controllers
         // GET: /Equipamento/Criar (renders form)
         public IActionResult Criar()
         {
-            return View(new EquipamentoModel());
+            return View(new EquipamentoModel
+            {
+                Nome = string.Empty,
+                Tipo = string.Empty
+            });
         }
 
         // POST: /Equipamento/Criar (handles form submission)
