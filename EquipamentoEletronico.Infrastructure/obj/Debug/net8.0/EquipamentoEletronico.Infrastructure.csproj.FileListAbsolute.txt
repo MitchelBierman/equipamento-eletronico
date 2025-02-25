@@ -1,0 +1,16 @@
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\bin\Debug\net8.0\EquipamentoEletronico.Infrastructure.deps.json
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\bin\Debug\net8.0\EquipamentoEletronico.Infrastructure.dll
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\bin\Debug\net8.0\EquipamentoEletronico.Infrastructure.pdb
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\bin\Debug\net8.0\EquipamentoEletronico.Domain.dll
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\bin\Debug\net8.0\EquipamentoEletronico.Domain.pdb
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.csproj.AssemblyReference.cache
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.AssemblyInfoInputs.cache
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.AssemblyInfo.cs
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.sourcelink.json
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\Equipame.75E5D96F.Up2Date
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.dll
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\refint\EquipamentoEletronico.Infrastructure.dll
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\EquipamentoEletronico.Infrastructure.pdb
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Infrastructure\obj\Debug\net8.0\ref\EquipamentoEletronico.Infrastructure.dll

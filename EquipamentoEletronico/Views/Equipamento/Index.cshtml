@@ -1,0 +1,34 @@
+﻿@using EquipamentoEletronico.API.Models
+@model List<EquipamentoModel>
+
+@{
+    ViewData["Title"] = "Lista de Equipamentos";
+}
+
+<h1>Lista de Equipamentos</h1>
+
+@if (Model?.Any() == true)
+{
+    <ul>
+        @foreach (var equipamento in Model)
+        {
+            <li>
+                <a asp-action="Detalhes" asp-controller="Equipamento" asp-route-id="@equipamento.Id">
+                    @equipamento.Nome
+                </a>
+                |
+                <a asp-action="Editar" asp-controller="Equipamento" asp-route-id="@equipamento.Id">Editar</a>
+                |
+                <form asp-action="Excluir" asp-controller="Equipamento" asp-route-id="@equipamento.Id" method="post" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Tem certeza que deseja excluir este equipamento?');">Excluir</button>
+                </form>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Nenhum equipamento encontrado.</p>
+}
+
+<a asp-action="Criar" asp-controller="Equipamento">Adicionar Novo Equipamento</a>
