@@ -4,3 +4,9 @@ obj/
 *.user
 *.suo
 *.db
+/EquipamentoEletronico.Application/obj/Debug/net8.0/ref/EquipamentoEletronico.Application.dll
+/EquipamentoEletronico.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+/EquipamentoEletronico.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll
+/EquipamentoEletronico.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+/EquipamentoEletronico.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+/EquipamentoEletronico.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
