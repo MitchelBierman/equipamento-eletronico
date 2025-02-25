@@ -1,0 +1,19 @@
+﻿@using EquipamentoEletronico.API.Models
+@model EquipamentoModel
+
+@{
+    ViewData["Title"] = "Detalhes do Equipamento";
+}
+
+<h1 class="mb-4">Detalhes do Equipamento</h1>
+
+<div class="card">
+    <div class="card-body">
+        <p class="mb-2"><strong>ID:</strong> @Model.Id</p>
+        <p class="mb-2"><strong>Nome:</strong> @Model.Nome</p>
+        <p class="mb-2"><strong>Tipo:</strong> @Model.Tipo</p>
+        <p class="mb-2"><strong>Quantidade em Estoque:</strong> @Model.QtdEmEstoque</p>
+    </div>
+</div>
+
+<a asp-controller="Equipamento" asp-action="Index" class="btn btn-secondary mt-3">Voltar</a>

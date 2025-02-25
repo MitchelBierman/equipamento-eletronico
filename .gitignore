@@ -1,0 +1,15 @@
+bin/
+obj/
+*.exe
+*.dll
+
+.vscode/
+*.suo
+*.user
+*.vs
+
+logs/
+*.log
+
+.env
+secrets.json
