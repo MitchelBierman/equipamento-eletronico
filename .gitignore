@@ -4,8 +4,5 @@ obj/
 *.user
 *.suo
 *.db
-/EquipamentoEletronico.Application/obj/Debug/net8.0/EquipamentoEletronico.Application.AssemblyInfo.cs
-/EquipamentoEletronico.Application/obj/Debug/net8.0/EquipamentoEletronico.Application.AssemblyInfoInputs.cache
-/EquipamentoEletronico.Application/bin/Debug/net8.0/EquipamentoEletronico.Application.dll
-/EquipamentoEletronico.Application/bin/Debug/net8.0/EquipamentoEletronico.Application.pdb
-/EquipamentoEletronico.Application/obj/Debug/net8.0/ref/EquipamentoEletronico.Application.dll
+/EquipamentoEletronico.Application/obj/
+/EquipamentoEletronico.Application/bin/
