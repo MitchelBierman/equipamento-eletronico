@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EquipamentoEletronicoAPI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\EquipamentoEletronicoAPI.13kl2ti2mx.bundle.scp.css"
+      "Id": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EquipamentoEletronico.API.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EquipamentoEletronico.API.73d1ty2yjr.bundle.scp.css"
     },
     {
       "Id": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico\\wwwroot\\css\\site.css",
@@ -245,24 +245,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EquipamentoEletronicoAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EquipamentoEletronico.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EquipamentoEletronicoAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EquipamentoEletronico.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EquipamentoEletronicoAPI.props",
-      "PackagePath": "build\\EquipamentoEletronicoAPI.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EquipamentoEletronico.API.props",
+      "PackagePath": "build\\EquipamentoEletronico.API.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EquipamentoEletronicoAPI.props",
-      "PackagePath": "buildMultiTargeting\\EquipamentoEletronicoAPI.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EquipamentoEletronico.API.props",
+      "PackagePath": "buildMultiTargeting\\EquipamentoEletronico.API.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EquipamentoEletronicoAPI.props",
-      "PackagePath": "buildTransitive\\EquipamentoEletronicoAPI.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EquipamentoEletronico.API.props",
+      "PackagePath": "buildTransitive\\EquipamentoEletronico.API.props"
     }
   ],
   "ElementsToRemove": []

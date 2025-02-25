@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "ContainingType": "EquipamentoEletronicoAPI.Controllers.EstoqueController",
+    "Method": "GetEstoque",
+    "RelativePath": "api/estoque",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "EquipamentoEletronico.Domain.Entities.Equipamento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EquipamentoEletronicoAPI.Controllers.EstoqueController",
+    "Method": "CreateEquipamento",
+    "RelativePath": "api/estoque",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EquipamentoEletronicoAPI.Controllers.EstoqueController",
+    "Method": "GetEquipamentoById",
+    "RelativePath": "api/estoque/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

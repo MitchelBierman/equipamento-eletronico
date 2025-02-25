@@ -35,6 +35,9 @@
             "projectReferences": {
               "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\EquipamentoEletronico.Domain.csproj": {
                 "projectPath": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Domain\\EquipamentoEletronico.Domain.csproj"
+              },
+              "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Infrastructure\\EquipamentoEletronico.Infrastructure.csproj": {
+                "projectPath": "D:\\Dev\\equipamento-eletronico\\EquipamentoEletronico.Infrastructure\\EquipamentoEletronico.Infrastructure.csproj"
               }
             }
           }
@@ -54,6 +57,32 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -190,6 +219,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -270,6 +309,14 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             },
             "coverlet.collector": {
               "target": "Package",

@@ -2,7 +2,9 @@ D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0\EquipamentoEletronico.Application.dll
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0\EquipamentoEletronico.Application.pdb
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0\EquipamentoEletronico.Domain.dll
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0\EquipamentoEletronico.Infrastructure.dll
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0\EquipamentoEletronico.Domain.pdb
+D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\bin\Debug\net8.0\EquipamentoEletronico.Infrastructure.pdb
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\obj\Debug\net8.0\EquipamentoEletronico.Application.csproj.AssemblyReference.cache
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\obj\Debug\net8.0\EquipamentoEletronico.Application.GeneratedMSBuildEditorConfig.editorconfig
 D:\Dev\equipamento-eletronico\EquipamentoEletronico.Application\obj\Debug\net8.0\EquipamentoEletronico.Application.AssemblyInfoInputs.cache

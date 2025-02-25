@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EquipamentoEletronico.Infrastructure;
 
-namespace EquipamentoEletronico.Infrastructure.Repositories
+public class EquipamentoRepository : IEquipamentoRepository
 {
-    internal class EquipamentoRepository
+    private readonly EquipamentoEletronicoDbContext _contexto;
+
+    public EquipamentoRepository(EquipamentoEletronicoDbContext contexto)
     {
+        _contexto = contexto;
+    }
+
+    public bool NomeJaExiste(string nome)
+    {
+        return _contexto.Equipamentos.Any(e => e.Nome == nome);
     }
 }
