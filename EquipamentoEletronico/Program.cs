@@ -39,7 +39,7 @@ using (var scope = app.Services.CreateScope())
         context.Equipamentos.AddRange(
             new Equipamento("Monitor Philco 299Y", "Monitor", 2, new DateTime(2025, 01, 09)),
             new Equipamento("Impressora Phillips 10Z", "Impressora", 3, new DateTime(2024, 12, 15)),
-            new Equipamento("Mouse Redragon 8000M", "Mouse", 5, new DateTime(2025, 02, 15))
+            new Equipamento("Mouse Redragon 8000M", "Mouse", 0, new DateTime(2025, 02, 15))
         );
 
         context.SaveChanges();

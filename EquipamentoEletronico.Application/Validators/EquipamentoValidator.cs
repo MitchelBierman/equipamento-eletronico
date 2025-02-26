@@ -20,7 +20,7 @@ public class EquipamentoEletronicoValidator : AbstractValidator<Equipamento>
             .NotEmpty().WithMessage("O Tipo é obrigatório.")
             .MinimumLength(3).WithMessage("O Tipo deve ter pelo menos 3 caracteres.")
             .MaximumLength(50).WithMessage("O Tipo não pode ter mais de 50 caracteres.")
-            .Matches(@"^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$").WithMessage("O Tipo deve conter apenas letras.");
+            .Must(ContemApenasLetras).WithMessage("O Tipo deve conter apenas letras.");
 
         RuleFor(e => e.QtdEmEstoque)
             .GreaterThanOrEqualTo(0).WithMessage("A quantidade deve ser maior ou igual a zero.")
@@ -35,5 +35,8 @@ public class EquipamentoEletronicoValidator : AbstractValidator<Equipamento>
         return Regex.IsMatch(value, @"\D");
     }
 
-
+    private bool ContemApenasLetras(string value)
+    {
+        return Regex.IsMatch(value, @"^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$");
+    }
 }

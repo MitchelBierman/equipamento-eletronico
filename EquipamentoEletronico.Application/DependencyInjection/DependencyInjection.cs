@@ -15,6 +15,7 @@ namespace EquipamentoEletronico.Application.DependencyInjection
             services.AddValidatorsFromAssembly(typeof(EquipamentoEletronicoValidator).Assembly);
 
             services.AddScoped<IEquipamentoService, EquipamentoService>();
+            services.AddScoped<IEquipamentoRepository, EquipamentoRepository>();
 
             services.AddDbContext<EquipamentoEletronicoDbContext>(options =>
                 options.UseInMemoryDatabase("EquipamentosDB"));
