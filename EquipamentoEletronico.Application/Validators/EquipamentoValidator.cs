@@ -27,7 +27,7 @@ public class EquipamentoEletronicoValidator : AbstractValidator<Equipamento>
             .LessThanOrEqualTo(10000).WithMessage("A quantidade não pode exceder 10.000 unidades.");
 
         RuleFor(e => e.DataInclusao)
-            .LessThanOrEqualTo(DateTime.Now).WithMessage("A Data de Inclusão não pode ser no futuro.");
+            .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("A Data de Inclusão não pode ser no futuro.");
     }
 
     private bool ContemNaoNumerico(string value)

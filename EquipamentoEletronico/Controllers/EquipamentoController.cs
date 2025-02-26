@@ -1,5 +1,4 @@
-﻿using EquipamentoEletronico.API.Models;
-using EquipamentoEletronico.Application.DTOs;
+﻿using EquipamentoEletronico.Application.DTOs;
 using EquipamentoEletronico.Domain.Entities;
 using EquipamentoEletronico.Domain.Interfaces;
 using FluentValidation;
@@ -20,24 +19,16 @@ namespace EquipamentoEletronico.Controllers
 
         public IActionResult Index()
         {
-            try
-            {
-                var lista = _equipamentoService.GetListaEquipamentos()
-                    .Select(e => new EquipamentoDTO
-                    {
-                        Id = e.Id,
-                        Nome = e.Nome,
-                        Tipo = e.Tipo,
-                        QtdEmEstoque = e.QtdEmEstoque,
-                    }).ToList();
+            var lista = _equipamentoService.GetListaEquipamentos()
+                .Select(e => new EquipamentoDTO
+                {
+                    Id = e.Id,
+                    Nome = e.Nome,
+                    Tipo = e.Tipo,
+                    QtdEmEstoque = e.QtdEmEstoque,
+                }).ToList();
 
-                return View(lista);
-            }
-            catch (Exception ex)
-            {
-                ViewData["Error"] = ex.Message;
-                return View("Error");
-            }
+            return View(lista);
         }
 
         public IActionResult Detalhes(int id)
@@ -154,16 +145,8 @@ namespace EquipamentoEletronico.Controllers
         [HttpPost]
         public IActionResult Excluir(int id)
         {
-            try
-            {
-                _equipamentoService.ExcluirEquipamento(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ViewData["Error"] = ex.Message;
-                return View("Error");
-            }
+            _equipamentoService.ExcluirEquipamento(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

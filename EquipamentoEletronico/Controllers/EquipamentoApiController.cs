@@ -8,7 +8,7 @@ namespace EquipamentoEletronico.API.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/equipamento")]
+    [Route("api/v1/equipamento")]
     public class EquipamentoApiController : ControllerBase
     {
         private readonly IEquipamentoService _equipamentoService;
@@ -18,6 +18,12 @@ namespace EquipamentoEletronico.API.Controllers
         {
             _equipamentoService = equipamentoService;
             _equipamentoValidator = equipamentoValidator;
+        }
+
+        [HttpGet("ServerTime")]
+        public IActionResult GetServerTime()
+        {
+            return Ok(DateTime.UtcNow);
         }
 
         [HttpGet]
@@ -30,6 +36,7 @@ namespace EquipamentoEletronico.API.Controllers
                     Nome = e.Nome,
                     Tipo = e.Tipo,
                     QtdEmEstoque = e.QtdEmEstoque,
+                    DataInclusao = e.DataInclusao
                 }).ToList();
 
             return Ok(lista);
