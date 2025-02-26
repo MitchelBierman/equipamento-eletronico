@@ -47,27 +47,6 @@ Este projeto é uma aplicação ASP.NET Core que combina MVC e API para gerencia
 - `PUT /api/equipamentos/{id}` – Atualiza um equipamento existente
 - `DELETE /api/equipamentos/{id}` – Remove um equipamento
 
-## Estrutura do Projeto
-
-```
-├── EquipamentoEletronico.Application
-├── EquipamentoEletronico.Domain
-├── EquipamentoEletronico.Infrastructure
-├── EquipamentoEletronico.Controllers
-│   ├── EquipamentoController.cs
-│   ├── Api
-│   │   ├── EquipamentoApiController.cs
-├── Views
-│   ├── Equipamento
-│   │   ├── Index.cshtml
-│   │   ├── Criar.cshtml
-│   │   ├── Editar.cshtml
-│   │   ├── Detalhes.cshtml
-│   │   ├── Error.cshtml
-├── Middleware
-│   ├── ExceptionHandlingMiddleware.cs
-```
-
 ## Contribuição
 
 Se quiser contribuir, sinta-se à vontade para abrir um Pull Request ou relatar problemas na aba de Issues.
