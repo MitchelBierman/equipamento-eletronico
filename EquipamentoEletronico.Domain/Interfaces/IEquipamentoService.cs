@@ -6,8 +6,8 @@ namespace EquipamentoEletronico.Domain.Interfaces
         Equipamento? GetById(int id);
         bool Validate(Equipamento equipamento, out List<string> errors);
         List<Equipamento> GetListaEquipamentos();
-        void AdicionarEquipamento(Equipamento equipamento);
-        void EditarEquipamento(Equipamento equipamento);
+        string AdicionarEquipamento(Equipamento equipamento);
+        string EditarEquipamento(Equipamento equipamento);
         void ExcluirEquipamento(int id);
     }
 }

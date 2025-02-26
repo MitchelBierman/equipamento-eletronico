@@ -3,23 +3,23 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EquipamentoEletronico.API.Models
 {
-    public class EquipamentoModel
+    public class EquipamentoModel : BaseEntity
     {
-        public int Id { get; set; }
-        public required string Nome { get; set; }
-        public required string Tipo { get; set; }
-        [Range(0, 10000, ErrorMessage = "A quantidade deve ser 0 e 10000.")]
+        public string Nome { get; set; }
+        public string Tipo { get; set; }
         public int QtdEmEstoque { get; set; }
-        public DateTime DataInclusao { get; set; }
+        public bool TemEstoque => QtdEmEstoque > 0;
 
         public Equipamento ToEntity()
         {
             return new Equipamento
             {
+                Id = this.Id,
                 Nome = this.Nome,
                 Tipo = this.Tipo,
                 QtdEmEstoque = this.QtdEmEstoque,
-                DataInclusao = DateTime.Now
+                DataInclusao = DateTime.Now.AddMilliseconds(-DateTime.Now.Millisecond)
+
             };
         }
     }

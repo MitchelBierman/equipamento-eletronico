@@ -1,5 +1,4 @@
-﻿using EquipamentoEletronico.API.Models;
-using EquipamentoEletronico.Application.DTOs;
+﻿using EquipamentoEletronico.Application.DTOs;
 using EquipamentoEletronico.Domain.Entities;
 using EquipamentoEletronico.Domain.Interfaces;
 using FluentValidation;
@@ -18,30 +17,20 @@ namespace EquipamentoEletronico.Controllers
             _equipamentoValidator = equipamentoValidator;
         }
 
-        // GET: /Equipamento
         public IActionResult Index()
         {
-            try
-            {
-                var lista = _equipamentoService.GetListaEquipamentos()
-                    .Select(e => new EquipamentoModel
-                    {
-                        Id = e.Id,
-                        Nome = e.Nome,
-                        Tipo = e.Tipo,
-                        QtdEmEstoque = e.QtdEmEstoque,
-                    }).ToList();
+            var lista = _equipamentoService.GetListaEquipamentos()
+                .Select(e => new EquipamentoDTO
+                {
+                    Id = e.Id,
+                    Nome = e.Nome,
+                    Tipo = e.Tipo,
+                    QtdEmEstoque = e.QtdEmEstoque,
+                }).ToList();
 
-                return View(lista);
-            }
-            catch (Exception ex)
-            {
-                ViewData["Error"] = ex.Message;
-                return View("Error");
-            }
+            return View(lista);
         }
 
-        // GET: /Equipamento/Detalhes/{id}
         public IActionResult Detalhes(int id)
         {
             var equipamento = _equipamentoService.GetById(id);
@@ -50,7 +39,7 @@ namespace EquipamentoEletronico.Controllers
                 return NotFound();
             }
 
-            var viewModel = new EquipamentoModel
+            var viewModel = new EquipamentoDTO
             {
                 Id = equipamento.Id,
                 Nome = equipamento.Nome,
@@ -61,25 +50,20 @@ namespace EquipamentoEletronico.Controllers
             return View(viewModel);
         }
 
-        // GET: /Equipamento/Criar (renders form)
         public IActionResult Criar()
         {
-            return View(new EquipamentoModel
+            return View(new EquipamentoDTO
             {
                 Nome = string.Empty,
                 Tipo = string.Empty
             });
         }
 
-        // POST: /Equipamento/Criar (handles form submission)
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Criar(EquipamentoModel viewModel)
+        public IActionResult Criar(EquipamentoDTO viewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(viewModel);
-            }
+            ModelState.Clear();
 
             var equipamento = new Equipamento
             {
@@ -94,16 +78,22 @@ namespace EquipamentoEletronico.Controllers
             {
                 foreach (var error in validationResult.Errors)
                 {
-                    ModelState.AddModelError("", error.ErrorMessage);
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
                 return View(viewModel);
             }
 
-            _equipamentoService.AdicionarEquipamento(equipamento);
+            var resultado = _equipamentoService.AdicionarEquipamento(equipamento);
+
+            if (!string.IsNullOrEmpty(resultado))
+            {
+                ModelState.AddModelError(nameof(viewModel.Nome), resultado);
+                return View(viewModel);
+            }
+
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: /Equipamento/Editar/{id}
         public IActionResult Editar(int id)
         {
             var equipamento = _equipamentoService.GetById(id);
@@ -112,7 +102,7 @@ namespace EquipamentoEletronico.Controllers
                 return NotFound();
             }
 
-            var viewModel = new EquipamentoModel
+            var viewModel = new EquipamentoDTO
             {
                 Id = equipamento.Id,
                 Nome = equipamento.Nome,
@@ -123,24 +113,31 @@ namespace EquipamentoEletronico.Controllers
             return View(viewModel);
         }
 
-        // POST: /Equipamento/Editar
         [HttpPost]
-        public IActionResult Editar(EquipamentoModel viewModel)
+        public IActionResult Editar(EquipamentoDTO viewModel)
         {
-            if (!ModelState.IsValid)
+            ModelState.Clear();
+
+            var equipamento = viewModel.ToEntity();
+
+            var validationResult = _equipamentoValidator.Validate(equipamento);
+
+            if (!validationResult.IsValid)
             {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
                 return View(viewModel);
             }
 
-            var equipamento = new Equipamento
-            {
-                Id = viewModel.Id,
-                Nome = viewModel.Nome,
-                Tipo = viewModel.Tipo,
-                QtdEmEstoque = viewModel.QtdEmEstoque
-            };
+            var resultado = _equipamentoService.EditarEquipamento(equipamento);
 
-            _equipamentoService.EditarEquipamento(equipamento);
+            if (!string.IsNullOrEmpty(resultado))
+            {
+                ModelState.AddModelError(nameof(viewModel.Nome), resultado);
+                return View(viewModel);
+            }
 
             return RedirectToAction(nameof(Index));
         }
@@ -148,17 +145,8 @@ namespace EquipamentoEletronico.Controllers
         [HttpPost]
         public IActionResult Excluir(int id)
         {
-            try
-            {
-                _equipamentoService.ExcluirEquipamento(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ViewData["Error"] = ex.Message;
-                return View("Error");
-            }
+            _equipamentoService.ExcluirEquipamento(id);
+            return RedirectToAction(nameof(Index));
         }
-
     }
 }

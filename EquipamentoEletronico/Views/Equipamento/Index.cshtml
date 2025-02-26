@@ -1,5 +1,5 @@
-﻿@using EquipamentoEletronico.API.Models
-@model List<EquipamentoModel>
+﻿@using EquipamentoEletronico.Application.DTOs
+@model List<EquipamentoDTO>
 
 @{
     ViewData["Title"] = "Lista de Equipamentos";
@@ -16,6 +16,9 @@
                 <a asp-action="Detalhes" asp-controller="Equipamento" asp-route-id="@equipamento.Id">
                     @equipamento.Nome
                 </a>
+                <span style="color: @(equipamento.TemEstoque ? "green" : "red");">
+                    (@(equipamento.TemEstoque ? "Tem estoque" : "Não tem estoque"))
+                </span>
                 |
                 <a asp-action="Editar" asp-controller="Equipamento" asp-route-id="@equipamento.Id">Editar</a>
                 |

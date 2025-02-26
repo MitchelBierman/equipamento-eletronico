@@ -1,16 +1,15 @@
 ﻿using FluentValidation;
 using EquipamentoEletronico.Domain.Entities;
 using EquipamentoEletronico.Domain.Interfaces;
-using EquipamentoEletronico.Infrastructure;
 
 namespace EquipamentoEletronico.Application.Services
 {
     public class EquipamentoService : IEquipamentoService
     {
         private readonly IValidator<Equipamento> _validator;
-        private readonly EquipamentoEletronicoDbContext _contexto;
+        private readonly IEquipamentoRepository _contexto;
 
-        public EquipamentoService(IValidator<Equipamento> validator, EquipamentoEletronicoDbContext contexto)
+        public EquipamentoService(IValidator<Equipamento> validator, IEquipamentoRepository contexto)
         {
             _validator = validator;
             _contexto = contexto;
@@ -31,40 +30,50 @@ namespace EquipamentoEletronico.Application.Services
 
         public List<Equipamento> GetListaEquipamentos()
         {
-            var lista = _contexto.Equipamentos.ToList();
+            var lista = _contexto.GetListaEquipamentos();
 
             return lista;
         }
         public Equipamento? GetById(int id)
         {
-            return _contexto.Equipamentos.FirstOrDefault(e => e.Id == id);
+            return _contexto.GetById(id);
         }
 
-        public void AdicionarEquipamento(Equipamento equipamento)
+        public string AdicionarEquipamento(Equipamento equipamento)
         {
-            _contexto.Equipamentos.Add(equipamento);
-            _contexto.SaveChanges();
+            var nomeUnico = !_contexto.ExisteEquipamento(equipamento.Nome);
+
+            if (!nomeUnico)
+                return "Já existe um equipamento com este nome.";
+
+            _contexto.AdicionarEquipamento(equipamento);
+            return string.Empty;
         }
 
-        public void EditarEquipamento(Equipamento equipamento)
+        public string EditarEquipamento(Equipamento equipamento)
         {
-            var equipamentoExistente = _contexto.Equipamentos.Find(equipamento.Id);
+            var equipamentoExistente = _contexto.GetById(equipamento.Id);
+            var nomeUnico = _contexto.NomeUnico(equipamento.Nome, equipamento.Id);
+
+            if (!nomeUnico)
+                return "Já existe um equipamento com este nome.";
+
             if (equipamentoExistente != null)
             {
-                _contexto.Entry(equipamentoExistente).CurrentValues.SetValues(equipamento);
-                _contexto.SaveChanges();
+                _contexto.EditarEquipamento(equipamento);
+                return string.Empty;
             }
+
+            return "Equipamento não encontrado.";
         }
 
         public void ExcluirEquipamento(int id)
         {
-            var equipamentoExistente = _contexto.Equipamentos.Find(id);
+            var equipamentoExistente = _contexto.GetById(id);
             if (equipamentoExistente != null)
             {
-                _contexto.Equipamentos.Remove(equipamentoExistente);
-                _contexto.SaveChanges();
+                _contexto.ExcluirEquipamento(id);
             }
         }
-
     }
 }
