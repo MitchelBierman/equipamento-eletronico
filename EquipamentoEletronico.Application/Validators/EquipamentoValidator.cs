@@ -32,11 +32,17 @@ public class EquipamentoEletronicoValidator : AbstractValidator<Equipamento>
 
     private bool ContemNaoNumerico(string value)
     {
-        return Regex.IsMatch(value, @"\D");
+        if (value == null)
+            return false;
+        else
+            return Regex.IsMatch(value, @"\D");
     }
 
     private bool ContemApenasLetras(string value)
     {
-        return Regex.IsMatch(value, @"^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$");
+        if (value == null)
+            return false;
+        else
+            return Regex.IsMatch(value, @"^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$");
     }
 }

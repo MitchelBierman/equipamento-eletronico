@@ -72,10 +72,7 @@ namespace EquipamentoEletronico.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Criar(EquipamentoDTO viewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(viewModel);
-            }
+            ModelState.Clear();
 
             var equipamento = new Equipamento
             {
@@ -128,10 +125,7 @@ namespace EquipamentoEletronico.Controllers
         [HttpPost]
         public IActionResult Editar(EquipamentoDTO viewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(viewModel);
-            }
+            ModelState.Clear();
 
             var equipamento = viewModel.ToEntity();
 
