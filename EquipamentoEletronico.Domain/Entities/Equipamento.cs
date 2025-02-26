@@ -1,12 +1,10 @@
 ﻿namespace EquipamentoEletronico.Domain.Entities
 {
-    public class Equipamento
+    public class Equipamento : BaseEntity
     {
-        public int Id { get; set; }
         public string Nome { get; set; }
         public string Tipo { get; set; }
         public int QtdEmEstoque { get; set; }
-        public DateTime DataInclusao { get; set; }
         public bool TemEstoque => QtdEmEstoque > 0;
 
         public Equipamento() { }
