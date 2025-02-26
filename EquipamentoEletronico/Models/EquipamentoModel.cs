@@ -3,14 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EquipamentoEletronico.API.Models
 {
-    public class EquipamentoModel
+    public class EquipamentoModel : BaseEntity
     {
-        public int Id { get; set; }
         public string Nome { get; set; }
         public string Tipo { get; set; }
         public int QtdEmEstoque { get; set; }
         public bool TemEstoque => QtdEmEstoque > 0;
-        public DateTime DataInclusao { get; set; }
 
         public Equipamento ToEntity()
         {

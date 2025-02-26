@@ -23,7 +23,7 @@ namespace EquipamentoEletronico.Controllers
             try
             {
                 var lista = _equipamentoService.GetListaEquipamentos()
-                    .Select(e => new EquipamentoModel
+                    .Select(e => new EquipamentoDTO
                     {
                         Id = e.Id,
                         Nome = e.Nome,
@@ -48,7 +48,7 @@ namespace EquipamentoEletronico.Controllers
                 return NotFound();
             }
 
-            var viewModel = new EquipamentoModel
+            var viewModel = new EquipamentoDTO
             {
                 Id = equipamento.Id,
                 Nome = equipamento.Nome,
@@ -61,7 +61,7 @@ namespace EquipamentoEletronico.Controllers
 
         public IActionResult Criar()
         {
-            return View(new EquipamentoModel
+            return View(new EquipamentoDTO
             {
                 Nome = string.Empty,
                 Tipo = string.Empty
@@ -70,7 +70,7 @@ namespace EquipamentoEletronico.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Criar(EquipamentoModel viewModel)
+        public IActionResult Criar(EquipamentoDTO viewModel)
         {
             if (!ModelState.IsValid)
             {
@@ -114,7 +114,7 @@ namespace EquipamentoEletronico.Controllers
                 return NotFound();
             }
 
-            var viewModel = new EquipamentoModel
+            var viewModel = new EquipamentoDTO
             {
                 Id = equipamento.Id,
                 Nome = equipamento.Nome,
@@ -126,7 +126,7 @@ namespace EquipamentoEletronico.Controllers
         }
 
         [HttpPost]
-        public IActionResult Editar(EquipamentoModel viewModel)
+        public IActionResult Editar(EquipamentoDTO viewModel)
         {
             if (!ModelState.IsValid)
             {
@@ -171,6 +171,5 @@ namespace EquipamentoEletronico.Controllers
                 return View("Error");
             }
         }
-
     }
 }

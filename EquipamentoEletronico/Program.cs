@@ -3,22 +3,32 @@ using EquipamentoEletronico.Domain.Entities;
 using EquipamentoEletronico.Infrastructure;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddControllers();
+
+builder.Services.AddApiVersioning(options =>
+{
+    options.ReportApiVersions = true;
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.ApiVersionReader = new UrlSegmentApiVersionReader();
+});
+
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
-
 builder.Services.AddValidatorsFromAssemblyContaining<EquipamentoEletronicoValidator>();
 
 builder.Services.AddDbContext<EquipamentoEletronicoDbContext>(options =>
     options.UseInMemoryDatabase("EquipamentosDB"));
 
 builder.Services.AddScoped<IEquipamentoRepository, EquipamentoRepository>();
-
 builder.Services.AddServices(builder.Configuration);
 
 var app = builder.Build();
@@ -28,7 +38,9 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Equipamento}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllers();
 
 using (var scope = app.Services.CreateScope())
 {
